@@ -20,22 +20,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard(props) {
+export default function ItemTemplate(props) {
   const classes = useStyles();
+  console.log(props);
   return (
     <Card className={classes.root}>
-      <CardHeader title= {props.name}/>
+      <CardHeader title= {props.data.name}/>
       <CardMedia
         className={classes.media}
-        image={props.route}
+        image={props.data.route}
         title="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {props.description}
+          {props.data.description}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          {props.price}
+          {props.data.price}
         </Typography>
         
       </CardContent>
