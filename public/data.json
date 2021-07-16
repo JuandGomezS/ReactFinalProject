@@ -1,0 +1,102 @@
+[
+	{
+	  "type": "est",
+	  "name": "Camisetas estampadas",
+	  "price": "5000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/estpre.jpg",
+	  "description": "Camisetas en algodón estampadas con alta calidad.",
+	  "id": "est-shirts"
+	},
+	{
+	  "type": "est",
+	  "name": "Posillos estampados",
+	  "price": "2000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/est4.jpg",
+	  "description": "Posillos en cerámica personalizables a tu gusto.",
+	  "id": "est-cup"
+	},
+	{
+	  "type": "est",
+	  "name": "Gorras estampadas",
+	  "price": "3000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/estprego.jpg",
+	  "description": "Gorras o cachuchas personalizables a tu gusto.",
+	  "id": "est-cap"
+	},
+	{
+	  "type": "pho",
+	  "name": "Fotografía Digital",
+	  "price": "5000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/fotopre.jpg",
+	  "description": "Fotografía en formato digital, se entrega en usb o cloud.",
+	  "id": "foto-d"
+	},
+	{
+	  "type": "pho",
+	  "name": "Fotografía Impresa",
+	  "price": "7000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/fotopreim.jpg",
+	  "description": "Fotografía impresa en papel fotográfico de alta calidad.",
+	  "id": "foto-i"
+	},
+	{
+	  "type": "vid",
+	  "name": "Grabación de video digital",
+	  "price": "25000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/grabvid.jpg",
+	  "description": "Grabación de video digital en FHD con equipos de alta tecnología.",
+	  "id": "video-gr"
+	},
+	{
+	  "type": "vid",
+	  "name": "Edición de video digital",
+	  "price": "30000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/edivid.jpg",
+	  "description": "Edición de video en software de alta fidelidad.",
+	  "id": "video-ed"
+	},
+	{
+	  "type": "vid",
+	  "name": "Grabación y edición",
+	  "price": "50000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/combo.jpg",
+	  "description": "Combo edición y grabación, se entrega en usb o cloud.",
+	  "id": "video-ge"
+	},
+	{
+	  "type": "ad",
+	  "name": "Branding",
+	  "price": "50000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/branding.jpg",
+	  "description": "Definición y construcción de marca según tus necesidades.",
+	  "id": "pub-b"
+	},
+	{
+	  "type": "ad",
+	  "name": "Redes sociales",
+	  "price": "100000",
+	  "iva": "19",
+	  "descuento": "0",
+	  "route": "../img/socialn.jpg",
+	  "description": "Diseño grafico para campañas en redes sociales.",
+	  "id": "pub-sn"
+	}
+]
