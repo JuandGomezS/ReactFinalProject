@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
-import {useStyles} from './style'
+import {useStyles} from './style';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 
 export function ItemCount({ stock, initial, onAdd }) {
@@ -18,7 +19,7 @@ export function ItemCount({ stock, initial, onAdd }) {
   }
 
   function drop() {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
       setDisable(false);
     }
@@ -42,7 +43,7 @@ export function ItemCount({ stock, initial, onAdd }) {
         <input className={classes.counterInput} type="text" value={count} />
         <Button className={classes.button2} onClick={push}>+</Button>
       </ButtonGroup>
-      <Button variant="outlined" disabled={disable} className={classes.pushCartButton} onClick={pushCart}>push al carrito</Button>
+      <Button variant="outlined" disabled={disable} className={classes.pushCartButton} onClick={pushCart}><AddShoppingCartIcon/></Button>
     </div>
   );
 }

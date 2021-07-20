@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
       border: "2px solid rgb(242, 146, 9)",
       backgroundColor: "#000",
       color: "rgb(242, 146, 9)",
-      fontSize: "1.2rem",
+      fontSize: "1.5rem",
       fontWeight: "bold",
       '&:hover': {
         border: "2px solid rgb(242, 146, 9)"
@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
       border: "1px solid rgb(242, 146, 9)",
       color: "rgb(242, 146, 9)",
       borderRadius: "0",
+      width: "80%",
       '&:hover': {
           color: "#000",
           backgroundColor: "rgb(242, 146, 9)",

@@ -31,18 +31,39 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "flex-end",
       alignItems: "center"
-
     },
     icon: {
       color: 'rgb(242, 146, 9)',
       borderRadius: "0%",
-      '&:hover': {
-        
+      '&:hover': {        
         color: '#000',
         backgroundColor: 'rgb(242, 146, 9)',
-        
+      }
+    },    
+    modal: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    paper: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#000'
+    },
+    rootDetails: {
+      maxWidth: 500,
+      maxHeight: "auto",
+      backgroundColor: '#000',
+      color: 'rgb(242, 146, 9)', 
+      fontFamily: 'Bebas Neue',
+    },
+    right: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
 
-      },
     }
   }));
 
