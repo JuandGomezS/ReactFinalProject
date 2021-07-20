@@ -1,13 +1,12 @@
 import React from 'react';
-import {useStyles} from './style'
-import {ItemCount} from '../itemCount'
+/* import {useStyles} from './style' */
 import ItemList from '../ItemList';
 
 
 
 
 export default function ItemContainer(props) { 
-    const classes = useStyles();
+    /* const _classes = useStyles(); */
 
     /* function haddleAdd(value) {
         console.log(`value: ${value}`);

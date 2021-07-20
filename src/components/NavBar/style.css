@@ -1,0 +1,9 @@
+.MuiTypography-h1 {
+    font-size: 3rem !important;
+    font-family: 'Bebas Neue' !important;
+    display: flex !important;
+    color: rgb(242, 146, 9);
+    padding: 0.2rem !important;
+    align-items: center !important;
+    flex-grow: 1;
+}

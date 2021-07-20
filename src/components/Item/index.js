@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import {useStyles} from './style'
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -8,45 +8,35 @@ import CardActions from "@material-ui/core/CardActions";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import SearchIcon from '@material-ui/icons/Search';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
-}));
+
 
 export default function ItemTemplate(props) {
   const classes = useStyles();
-  console.log(props);
   return (
     <Card className={classes.root}>
-      <CardHeader title= {props.data.name}/>
+      <CardHeader title= {props.data.name} classes={{ title: classes.headerTitle}} />
       <CardMedia
         className={classes.media}
         image={props.data.route}
-        title="Paella dish"
+        title=""
       />
+      <CardActions disableSpacing className={classes.iconContainer}>
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {props.data.description}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {props.data.price}
-        </Typography>
-        
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.price}>
+          ${props.data.price}
+        </Typography>        
       </CardContent>
-
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="add to favorites" className={classes.icon}>
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
+        <IconButton aria-label="details" className={classes.icon}>
+          <SearchIcon />
+        </IconButton>
+        <IconButton aria-label="share" className={classes.icon}>
+          <AddShoppingCartIcon />
         </IconButton>
       </CardActions>
     </Card>
