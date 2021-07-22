@@ -8,7 +8,6 @@ import CardActions from "@material-ui/core/CardActions";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import SearchIcon from '@material-ui/icons/Search';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -26,13 +25,15 @@ export default function ItemTemplate(props) {
     setDetails(true);
   };
 
+  const handleClose = () => {
+    setDetails(false);
+  };
+
   function haddleAdd(value) {
     console.log(`value: ${value}`);
   }
 
-  const handleClose = () => {
-    setDetails(false);
-  };
+  
   const classes = useStyles();
 
   const body = (
@@ -107,9 +108,6 @@ export default function ItemTemplate(props) {
             onClick={handleOpen}
           >
             <SearchIcon />
-          </IconButton>
-          <IconButton aria-label="share" className={classes.icon}>
-            <AddShoppingCartIcon />
           </IconButton>
         </CardActions>
       </Card>

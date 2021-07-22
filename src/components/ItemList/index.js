@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ItemTemplate from "../Item";
 import {useStyles} from './style'
 
-export default function ItemList() {
+export default function ItemList({id}) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -11,8 +11,12 @@ export default function ItemList() {
   }, []);
 
   const call = async () => {
-    const products = await fetch("datos/data.json");
-    const result = await products.json();
+    const products = await fetch("/datos/data.json");
+    let result = await products.json();
+    console.log(result);
+    if(id){
+      result= result.filter(x => x.type === id);
+    }
     setItems(result);
   };
   const classes = useStyles();

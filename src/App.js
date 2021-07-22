@@ -2,18 +2,28 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import ItemContainer from './components/ListContainer';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
 
 
 
 
 function App() {
   return (
-    <div className="App">
+
+
+    <BrowserRouter>
       <NavBar/>
-      <ItemContainer greetings='Hola este es mi e-commerce'/>
+      <Switch>
+        <Route exact path='/' component={ ItemContainer }/>
+        <Route exact path='/category/:id' component={ItemContainer}/>
+        <Redirect to='/'/>
+      </Switch>
       
-    </div>
+    </BrowserRouter>
+
   );
+  
 }
 
 export default App;

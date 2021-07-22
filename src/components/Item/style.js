@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       color: 'rgb(242, 146, 9)',
       fontSize: "1.8rem",
       fontWeight: "bold",
-      paddingRight: "5rem", 
+      paddingRight: "9rem", 
       fontFamily: 'Bebas Neue',
       
     },
