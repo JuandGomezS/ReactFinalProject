@@ -30,7 +30,7 @@ export default function NavBar() {
 					<Typography variant="h1" >
 						RAVEN ART
 					</Typography>
-					<Button color="inherit" className={classes.Button}>Inicio</Button>
+					<Link to='/'><Button color="inherit" className={classes.Button}>Inicio</Button></Link>
 					<Button color="inherit" className={classes.Button}>Favoritos</Button>
 					<Button color="inherit" className={classes.Button}>Mis Compras</Button>
 					<Button aria-controls="simple-menu" className={classes.Button} aria-haspopup="true" onClick={handleClick}>
@@ -43,10 +43,10 @@ export default function NavBar() {
 						open={Boolean(anchorEl)}
 						onClose={handleClose}						
 					>
-						<Link to='/category/est'><MenuItem className={classes.Button} onClick={handleClose}>estampados</MenuItem></Link>
-						<MenuItem className={classes.Button} onClick={handleClose}>FOTOGRAFÍA</MenuItem>
-						<MenuItem className={classes.Button} onClick={handleClose}>VIDEO</MenuItem>
-						<MenuItem className={classes.Button} onClick={handleClose}>PUBLICIDAD</MenuItem>
+						<Link to='/category/est'><MenuItem className={classes.Button} onClick={handleClose}>ESTAMPADOS</MenuItem></Link>
+						<Link to='/category/pho'><MenuItem className={classes.Button} onClick={handleClose}>FOTOGRAFÍA</MenuItem></Link>
+						<Link to='/category/vid'><MenuItem className={classes.Button} onClick={handleClose}>VIDEO</MenuItem></Link>
+						<Link to='/category/ad'><MenuItem className={classes.Button} onClick={handleClose}>PUBLICIDAD</MenuItem></Link>
 					</Menu>
 					
 					<Button color="inherit" className={classes.Button}><CartWidget /></Button>

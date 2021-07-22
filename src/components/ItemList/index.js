@@ -1,10 +1,18 @@
 import { Grid } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import ItemTemplate from "../Item";
-import {useStyles} from './style'
+import {useStyles} from './style';
 
-export default function ItemList({id}) {
+export default function ItemList() {
   const [items, setItems] = useState([]);
+  
+  
+  
+ 
+  
+
+
+ 
 
   useEffect(() => {
     call();
@@ -13,12 +21,17 @@ export default function ItemList({id}) {
   const call = async () => {
     const products = await fetch("/datos/data.json");
     let result = await products.json();
-    console.log(result);
-    if(id){
-      result= result.filter(x => x.type === id);
-    }
+
+
+    console.log(result)
     setItems(result);
+    
+    
   };
+
+
+
+
   const classes = useStyles();
 
   return (
