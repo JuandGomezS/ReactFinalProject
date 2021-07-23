@@ -30,6 +30,7 @@ export default function NavBar() {
 					<Typography variant="h1" >
 						RAVEN ART
 					</Typography>
+					
 					<Link to='/'><Button color="inherit" className={classes.Button}>Inicio</Button></Link>
 					<Button color="inherit" className={classes.Button}>Favoritos</Button>
 					<Button color="inherit" className={classes.Button}>Mis Compras</Button>

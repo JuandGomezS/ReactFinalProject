@@ -5,9 +5,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#000",
       padding: "2rem 0rem 0rem 3rem",
       display: "flex",
-      justifyContent: "space-around",
-      alignItems: "center",
-      paddingBottom: "5rem" 
+      justifyContent: "center",
+      alignItems: "flex-start",
+      paddingBottom: "5rem",
+      height: "120vh"
       
     },
   }));

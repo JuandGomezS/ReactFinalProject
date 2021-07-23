@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-	Paragraph: {
+	root: {
 		color: 'rgb(242, 146, 9)',
 	},
 }));
