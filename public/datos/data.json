@@ -1,5 +1,5 @@
 [
-	{
+	{ 
 	  "type": "est",
 	  "name": "Camisetas estampadas",
 	  "price": "5000",
@@ -7,7 +7,7 @@
 	  "descuento": "0",
 	  "route": "../img/estpre.jpg",
 	  "description": "Camisetas en algodón estampadas con alta calidad.",
-	  "id": "est-shirts"
+	  "id": "1"
 	},
 	{
 	  "type": "est",
@@ -17,7 +17,7 @@
 	  "descuento": "0",
 	  "route": "../img/est4.jpg",
 	  "description": "Posillos en cerámica personalizables a tu gusto.",
-	  "id": "est-cup"
+	  "id": "2"
 	},
 	{
 	  "type": "est",
@@ -27,7 +27,7 @@
 	  "descuento": "0",
 	  "route": "../img/estprego.jpg",
 	  "description": "Gorras o cachuchas personalizables a tu gusto.",
-	  "id": "est-cap"
+	  "id": "3"
 	},
 	{
 	  "type": "pho",
@@ -37,7 +37,7 @@
 	  "descuento": "0",
 	  "route": "../img/fotopre.jpg",
 	  "description": "Fotografía en formato digital, se entrega en usb o cloud.",
-	  "id": "foto-d"
+	  "id": "4"
 	},
 	{
 	  "type": "pho",
@@ -47,7 +47,7 @@
 	  "descuento": "0",
 	  "route": "../img/fotopreim.jpg",
 	  "description": "Fotografía impresa en papel fotográfico de alta calidad.",
-	  "id": "foto-i"
+	  "id": "5"
 	},
 	{
 	  "type": "vid",
@@ -57,7 +57,7 @@
 	  "descuento": "0",
 	  "route": "../img/grabvid.jpg",
 	  "description": "Grabación de video digital en FHD con equipos de alta tecnología.",
-	  "id": "video-gr"
+	  "id": "6"
 	},
 	{
 	  "type": "vid",
@@ -67,7 +67,7 @@
 	  "descuento": "0",
 	  "route": "../img/edivid.jpg",
 	  "description": "Edición de video en software de alta fidelidad.",
-	  "id": "video-ed"
+	  "id": "7"
 	},
 	{
 	  "type": "vid",
@@ -77,7 +77,7 @@
 	  "descuento": "0",
 	  "route": "../img/combo.jpg",
 	  "description": "Combo edición y grabación, se entrega en usb o cloud.",
-	  "id": "video-ge"
+	  "id": "8"
 	},
 	{
 	  "type": "ad",
@@ -87,7 +87,7 @@
 	  "descuento": "0",
 	  "route": "../img/branding.jpg",
 	  "description": "Definición y construcción de marca según tus necesidades.",
-	  "id": "pub-b"
+	  "id": "9"
 	},
 	{
 	  "type": "ad",
@@ -97,6 +97,6 @@
 	  "descuento": "0",
 	  "route": "../img/socialn.jpg",
 	  "description": "Diseño grafico para campañas en redes sociales.",
-	  "id": "pub-sn"
+	  "id": "10"
 	}
 ]
