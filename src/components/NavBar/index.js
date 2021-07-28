@@ -50,7 +50,7 @@ export default function NavBar() {
 						<Link to='/category/ad'><MenuItem className={classes.Button} onClick={handleClose}>PUBLICIDAD</MenuItem></Link>
 					</Menu>
 					
-					<Button color="inherit" className={classes.Button}><CartWidget /></Button>
+					<Link to='/cart'><Button color="inherit" className={classes.Button}><CartWidget /></Button></Link>
 				</Toolbar>
 			</AppBar>
 		</div>
