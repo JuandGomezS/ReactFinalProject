@@ -8,11 +8,13 @@ import Typography from "@material-ui/core/Typography";
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../cartContext';
 import './style.css';
 
 
 export default function NavBar() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
+	const {cartQty } = useCartContext();
 
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
@@ -50,7 +52,7 @@ export default function NavBar() {
 						<Link to='/category/ad'><MenuItem className={classes.Button} onClick={handleClose}>PUBLICIDAD</MenuItem></Link>
 					</Menu>
 					
-					<Link to='/cart'><Button color="inherit" className={classes.Button}><CartWidget /></Button></Link>
+					<Link to='/cart'><Button color="inherit" className={classes.Button}><CartWidget/>{cartQty}</Button></Link>
 				</Toolbar>
 			</AppBar>
 		</div>

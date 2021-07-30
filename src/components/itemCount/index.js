@@ -3,13 +3,17 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import {useStyles} from './style';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { useCartContext } from '../../cartContext';
 
 
-export function ItemCount({ stock, initial, onAdd }) {
+export function ItemCount({ stock, initial, onAdd, name}) {
   
   const [count, setCount] = useState(initial);
   const [status, setStatus] = useState(false);
   const [disable, setDisable] = useState(false);
+
+
+  const { addItem } = useCartContext();
 
   function push() {
     if (count < stock) {
@@ -32,6 +36,7 @@ export function ItemCount({ stock, initial, onAdd }) {
   function pushCart() {
     if (status) {
       onAdd(count);
+      addItem(name, count);
       setDisable(true);
     }
   }

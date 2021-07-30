@@ -28,6 +28,7 @@ export default function ItemDetailsTemplate(props) {
   }
 
   console.log("Cantidad: " + quantity);
+  console.log("props: " + props.data);
 
   return (
     <div className={classes.paper}>
@@ -64,7 +65,7 @@ export default function ItemDetailsTemplate(props) {
         </div>
         <div className={classes.contenedor}>
           <div style={{ visibility: viCount }}>
-            <ItemCount stock={props.data.stock} initial={1} onAdd={haddleAdd}/>
+            <ItemCount stock={props.data.stock} initial={1} onAdd={haddleAdd} name={props.data}/>
           </div>
           <Link to="/cart">
             <Button style={{ visibility: viButton }} className={classes.endBuy}>
