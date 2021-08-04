@@ -15,6 +15,12 @@ const useStyles = makeStyles((theme) => ({
       fontFamily : 'Bebas Neue',
       fontSize: "5rem",
       textAlign: 'center'
+    },
+    b:{
+      color: 'rgb(242, 146, 9)',
+      fontFamily : 'Bebas Neue',
+      fontSize: "2rem",
+      textAlign: 'center'
     }
   }));
 

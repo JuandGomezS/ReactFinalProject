@@ -65,7 +65,7 @@ export default function ItemDetailsTemplate(props) {
         </div>
         <div className={classes.contenedor}>
           <div style={{ visibility: viCount }}>
-            <ItemCount stock={props.data.stock} initial={1} onAdd={haddleAdd} name={props.data}/>
+            <ItemCount stock={props.data.stock} initial={1} onAdd={haddleAdd} name={props.data} price={props.data.price}/>
           </div>
           <Link to="/cart">
             <Button style={{ visibility: viButton }} className={classes.endBuy}>

@@ -30,7 +30,16 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       borderBottom: '1px solid rgb(242, 146, 9)',
     },
-  }
+  },
+  Quant:{
+    color: '#000',
+    fontSize: '0.7rem',
+    top: '2px',
+    minWidth: '1.2rem',
+    display:'inline-block',
+    position: 'absolute',
+
+  },
 }));
 
 export{useStyles};

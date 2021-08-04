@@ -52,7 +52,15 @@ export default function NavBar() {
 						<Link to='/category/ad'><MenuItem className={classes.Button} onClick={handleClose}>PUBLICIDAD</MenuItem></Link>
 					</Menu>
 					
-					<Link to='/cart'><Button color="inherit" className={classes.Button}><CartWidget/>{cartQty}</Button></Link>
+					<Link to='/cart'>
+						<Button color="inherit" className={classes.Button}>
+							<CartWidget/>
+
+							<div className={classes.Quant}>
+								{cartQty}
+							</div>
+						</Button>
+				    </Link>
 				</Toolbar>
 			</AppBar>
 		</div>

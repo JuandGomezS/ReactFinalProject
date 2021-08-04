@@ -6,11 +6,12 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { useCartContext } from '../../cartContext';
 
 
-export function ItemCount({ stock, initial, onAdd, name}) {
+export function ItemCount({ stock, initial, onAdd, name, price}) {
   
   const [count, setCount] = useState(initial);
   const [status, setStatus] = useState(false);
   const [disable, setDisable] = useState(false);
+
 
 
   const { addItem } = useCartContext();
@@ -31,12 +32,13 @@ export function ItemCount({ stock, initial, onAdd, name}) {
 
   React.useEffect(() => {
     setStatus(stock > 0 && count > 0 && count <= stock);
+
   }, [count]);
 
   function pushCart() {
     if (status) {
       onAdd(count);
-      addItem(name, count);
+      addItem(name, count, price);
       setDisable(true);
     }
   }
