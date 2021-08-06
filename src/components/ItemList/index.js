@@ -2,24 +2,30 @@ import { Grid } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import ItemTemplate from "../Item";
 import {useStyles} from './style';
-import './style.css'
+import './style.css';
+import {getFirestore} from "../../firebase";
 
 export default function ItemList({id}) {
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    const call = async () => {
-      const products = await fetch("/datos/data.json");
-      let result = await products.json();
+  const db = getFirestore();
 
+  const getData = async () => {
+    db.collection("productos").onSnapshot((querySnapshot) => {
+      let result = [];
+      querySnapshot.forEach((doc) => {
+        result.push({ ...doc.data(), id: doc.id });
+      });
       if(id){
-        result= result.filter(x => x.type === id);
-
+        result= result.filter(element => element.type === id);
       }
       setItems(result);
-    };
-    call();
-  }, [id]);
+    });
+  };
+
+  useEffect(() => {
+    getData();
+  });
 
 
   const classes = useStyles();

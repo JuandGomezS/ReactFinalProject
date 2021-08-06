@@ -13,8 +13,7 @@ export default function Cart () {
     console.log("Qty:"+ cartQty);
     console.log("Price:"+ totalPrice);
 
-    useEffect(() => {
-      
+    useEffect(() => {      
       if(cartItems.length === 0){
         setMostrar(false)
         console.log('TotalPerras')

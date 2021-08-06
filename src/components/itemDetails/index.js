@@ -2,29 +2,31 @@ import React, { useState, useEffect} from "react";
 import { useStyles } from "./style";
 import { useParams } from 'react-router-dom';
 import ItemDetailsTemplate from "../itemDetailsTemplate";
+import {getFirestore} from "../../firebase";
 
 export default function ItemDetails() {
   const [items, setItems] = useState([]);
 
   const {id}= useParams();
 
+  const db = getFirestore();
 
-
- 
-
-  useEffect(() => {
-    const call = async () => {
-      const products = await fetch("/datos/data.json");
-      let result = await products.json();
-
-      if (id) {
+  const getData = async () => {
+    db.collection("productos").onSnapshot((querySnapshot) => {
+      let result = [];
+      querySnapshot.forEach((doc) => {
+        result.push({ ...doc.data(), id: doc.id });
+      });
+      if(id){
         result= result.filter(element => element.id === id);
-        
       }
       setItems(result);
-    };
-    call();
-  }, [id]);
+    });
+  };
+
+  useEffect(() => {
+    getData();
+  });
 
 
 
