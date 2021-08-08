@@ -39,7 +39,7 @@ export default function ItemDetailsTemplate(props) {
               component="img"
               alt={props.data.description}
               height="100%"
-              image={props.data.route}
+              image={props.data.route}      
               title={props.data.name}
             />
             <CardContent>

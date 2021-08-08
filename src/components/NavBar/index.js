@@ -29,8 +29,9 @@ export default function NavBar() {
 		<div className={classes.root}>
 			<AppBar position="static" className={classes.AppBar}>
 				<Toolbar className={classes.Toolbar}>
+						
 					<Typography variant="h1" >
-						RAVEN ART
+					   <Link to='/' style={{ textDecoration: 'none', color: 'rgb(242, 146, 9)' }}>RAVEN ART</Link>
 					</Typography>
 					
 					<Link to='/'><Button color="inherit" className={classes.Button}>Inicio</Button></Link>
@@ -44,12 +45,21 @@ export default function NavBar() {
 						anchorEl={anchorEl}
 						keepMounted
 						open={Boolean(anchorEl)}
-						onClose={handleClose}						
+						onClose={handleClose}
+											
 					>
-						<Link to='/category/est'><MenuItem className={classes.Button} onClick={handleClose}>ESTAMPADOS</MenuItem></Link>
-						<Link to='/category/pho'><MenuItem className={classes.Button} onClick={handleClose}>FOTOGRAFÍA</MenuItem></Link>
-						<Link to='/category/vid'><MenuItem className={classes.Button} onClick={handleClose}>VIDEO</MenuItem></Link>
-						<Link to='/category/ad'><MenuItem className={classes.Button} onClick={handleClose}>PUBLICIDAD</MenuItem></Link>
+						<Link to='/category/est' style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }} >
+							<MenuItem className={classes.ButtonC} onClick={handleClose}>ESTAMPADOS</MenuItem>
+						</Link>
+						<Link to='/category/pho' style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }}>
+							<MenuItem className={classes.ButtonC} onClick={handleClose}>FOTOGRAFÍA</MenuItem>
+						</Link>
+						<Link to='/category/vid' style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }}>
+							<MenuItem className={classes.ButtonC} onClick={handleClose}>VIDEO</MenuItem>
+						</Link>
+						<Link to='/category/ad' style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }}>
+							<MenuItem className={classes.ButtonC} onClick={handleClose}>PUBLICIDAD</MenuItem>
+						</Link>
 					</Menu>
 					
 					<Link to='/cart'>

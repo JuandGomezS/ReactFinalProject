@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
       display: 'block',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
       backgroundColor: '#000',
       height: '100vh',
 
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
       color: 'rgb(242, 146, 9)',
       fontFamily : 'Bebas Neue',
       fontSize: "5rem",
-      textAlign: 'center'
+      textAlign: 'center',
     },
     b:{
       color: 'rgb(242, 146, 9)',

@@ -24,11 +24,27 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '2rem',
     fontSize: '1.2rem',
     maxHeight: '2rem',
-
+    backgroundColor: '#000',
     color: 'rgb(242, 146, 9)',
     borderRadius: '0',
+    fontFamily: 'Bebas Neue',
     '&:hover': {
       borderBottom: '1px solid rgb(242, 146, 9)',
+      backgroundColor: '#000',
+    },
+  },
+  ButtonC: {
+    marginRight: '0rem',
+    marginTop: '0rem',
+    fontSize: '1.2rem',
+    maxHeight: '2rem',
+    backgroundColor: '#000',
+    color: 'rgb(242, 146, 9)',
+    borderRadius: '0',
+    fontFamily: 'Bebas Neue !important',
+    '&:hover': {
+      borderBottom: '1px solid rgb(242, 146, 9) !important',
+      backgroundColor: '#000 !important',
     },
   },
   Quant:{
