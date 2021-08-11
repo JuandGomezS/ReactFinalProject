@@ -4,15 +4,41 @@ import { useCartContext } from "../../cartContext";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import HomeIcon from "@material-ui/icons/Home";
+import {getFirestore} from "../../firebase";
+import firebase from "firebase/app";
 
 export default function Cart() {
   const [mostrar, setMostrar] = useState(true);
   const classes = useStyles();
-  const { cartItems, cartQty, totalPrice, GetTotalPrice, deleteItem } =
-    useCartContext();
+  const { cartItems, totalPrice, GetTotalPrice, deleteItem } = useCartContext();
+  const [confirmation, setConfirmation] = useState();
 
-  console.log("Qty:" + cartQty);
-  console.log("Price:" + totalPrice);
+
+
+  const createOrder= () => {
+    const newOrder = { 
+      buyer: {
+        name: "John",
+        phone: "123",
+        email: "john@test.com"      
+      },
+      cartItems: cartItems,
+      date: firebase.firestore.Timestamp.fromDate(new Date()),
+      total: totalPrice
+    }
+
+    const db = getFirestore();
+    const collection = db.collection("orders");
+    const query = collection.add(newOrder);
+    query.then((response) => {
+      console.log("Order created");
+      setConfirmation(response.id);
+    })
+    .catch ((err)=>{
+      console.log("Error creating order");
+      console.log(err);
+    })
+  }
 
   useEffect(() => {
     if (cartItems.length === 0) {
@@ -20,7 +46,7 @@ export default function Cart() {
       console.log("TotalPerras");
     }
     GetTotalPrice();
-  },[cartItems.length, GetTotalPrice]);
+  }, [cartItems.length, GetTotalPrice]);
 
   return (
     <div className={classes.root}>
@@ -48,7 +74,10 @@ export default function Cart() {
             </p>
           ))}
         <p className={classes.p}>Total: ${totalPrice}</p>
+        <button className={classes.b} onClick={createOrder}>Confirmar Compra</button>
+        {confirmation && <p className={classes.p}>Confirmación de compra: {confirmation}</p>}}
       </div>
+      
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function ItemDetailsTemplate(props) {
   function haddleAdd(value) {
     setQuantity(value);
 
-    if (value > 0) {
+    if (quantity > 0) {
       setViButton("visible");
       setViCount("collapse");
     } else {
@@ -27,8 +27,6 @@ export default function ItemDetailsTemplate(props) {
     }
   }
 
-  console.log("Cantidad: " + quantity);
-  console.log("props: " + props.data);
 
   return (
     <div className={classes.paper}>
