@@ -57,7 +57,17 @@ const useStyles = makeStyles((theme) => ({
     },
     input: {
       minWidth: '100%',
+      border: '1px solid rgb(242, 146, 9)',
+      backgroundColor: "#000",
+      fontSize: "1.2rem",
+      color: 'rgb(242, 146, 9)'
+    },
+    label: {
+      color: 'rgb(242, 146, 9)',
+      fontFamily : 'Bebas Neue',
+      fontSize: "1.5rem",
     }
+
     
   }));
 

@@ -11,13 +11,14 @@ import CartItemTemplate from "../cartItemTemplate";
 
 export default function Cart() {
   const [mostrar, setMostrar] = useState(true);
+  const [confirmation, setConfirmation] = useState();
+  const [disable, setDisable] = useState(true);
   const classes = useStyles();
   const { cartItems, totalPrice, GetTotalPrice} = useCartContext();
-  const [confirmation, setConfirmation] = useState();
   const [userInfo, setUserInfo] = useState({
-    name: "",
-    phone: "",
-    email: ""  
+    name: " ",
+    phone: " ",
+    email: " "  
    });
 
 
@@ -47,7 +48,6 @@ export default function Cart() {
 
   const print= (event)=>{
 
-    console.log('event.relatedTarget', event.relatedTarget);
     if (!event.currentTarget.contains(event.relatedTarget)) {
       setUserInfo({
         ...userInfo,   
@@ -58,14 +58,22 @@ export default function Cart() {
     
   }
 
+  
+
   useEffect(() => {
     if (cartItems.length === 0) {
       setMostrar(false);
-      console.log("TotalPerras");
     }
-    GetTotalPrice();
-  }, [cartItems.length, GetTotalPrice]);
 
+    if(userInfo.name !== " " && userInfo.email !== " " && userInfo.phone !== " " ){
+      setDisable(false)
+      console.log(userInfo.name + " " + userInfo.email)
+    }
+    
+    GetTotalPrice();
+  }, [cartItems.length, GetTotalPrice, userInfo.name, userInfo.email, userInfo.phone]);
+
+  console.log(disable)
 
   return (
     <div className={classes.root}>
@@ -96,18 +104,18 @@ export default function Cart() {
           </div>
 
           <div className={classes.inputBox}>
-            <label for="name">Nombre:</label>
+            <label for="name" className={classes.label}>Nombre:</label>
             <input type="text" placeholder="Nombre" className={classes.input} id="name" onBlur={print} />
 
-            <label for="email">Correo:</label>
+            <label for="email" className={classes.label}>Correo:</label>
             <input type="text" placeholder="Correo" className={classes.input} id="email" onBlur={print}/>
 
-            <label for="phone">Celular:</label>
+            <label for="phone" className={classes.label}>Celular:</label>
             <input type="number" placeholder="Número celular" className={classes.input} id="phone" onBlur={print}/>
           </div>
 
           <p className={classes.p}>Total: ${totalPrice}</p>
-          <Button className={classes.b} onClick={createOrder}>Confirmar Compra</Button>
+          <Button className={classes.b} disabled={disable} onClick={createOrder}>Confirmar Compra</Button>
           {confirmation && <p className={classes.p}>Confirmación de compra: {confirmation}</p>}
         </div>
 
