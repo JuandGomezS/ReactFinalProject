@@ -33,7 +33,7 @@ export function ItemCount({ stock, initial, onAdd, name, price}) {
   React.useEffect(() => {
     setStatus(stock > 0 && count > 0 && count <= stock);
 
-  }, [count]);
+  }, [count,stock]);
 
   function pushCart() {
     if (status) {
@@ -45,6 +45,7 @@ export function ItemCount({ stock, initial, onAdd, name, price}) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <p className={classes.stock}>STOCK: {stock} </p>
       <ButtonGroup color="primary" aria-label="outlined primary button group">
         <Button className={classes.button1} onClick={drop}>-</Button>
         <input className={classes.counterInput} type="text" value={count} />

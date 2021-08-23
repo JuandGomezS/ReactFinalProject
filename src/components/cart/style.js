@@ -3,12 +3,38 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
 
     root: {
-      display: 'block',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      backgroundColor: '#000',
-      height: '100vh',
+      backgroundColor: "#000",
+      padding: "2rem 0rem 0rem 3rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "flex-start",
+      paddingBottom: "2rem",
+      height: "120vh"
 
+    },
+    box1: {
+      display: "flex !important",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+
+    },
+    box2: {
+      display: "flex !important",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      
+    },
+    ebox: {
+      display: "flex !important",
+    },
+    box: {
+      display: "flex !important",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      margin: "0rem 1rem 0rem 1rem",
     },
     p: {
       color: 'rgb(242, 146, 9)',
@@ -21,7 +47,18 @@ const useStyles = makeStyles((theme) => ({
       fontFamily : 'Bebas Neue',
       fontSize: "2rem",
       textAlign: 'center'
+    },
+    inputBox: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      minWidth: '100%',
+    },
+    input: {
+      minWidth: '100%',
     }
+    
   }));
 
   export {useStyles};

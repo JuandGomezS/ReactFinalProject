@@ -59,6 +59,11 @@ const useStyles = makeStyles((theme) => ({
           backgroundColor: "rgb(242, 146, 9)",
           border: "1px solid rgb(242, 146, 9)"
       }
+    },
+    stock: {
+      fontFamily: 'Bebas Neue',
+      color: "rgb(242, 146, 9)",
+      fontSize: "1.5rem"
     }
     
   }));

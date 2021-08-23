@@ -58,7 +58,7 @@ const CartProvider = ({ children }) => {
 
   const GetTotalPrice = ()=>{
     const copy = [...cartItems];
-    console.log(cartItems)
+
     if(copy.length>0){
       const totalP=copy.reduce((accumulator, currentValue) => accumulator + currentValue.price,0);
       setTotalPrice(totalP);

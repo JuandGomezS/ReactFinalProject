@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      maxWidth: 345,
+      minWidth: 345,
       backgroundColor: '#000',
       color: 'rgb(242, 146, 9)',
       border: '1px solid rgb(242, 146, 9)',
@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
       color: 'rgb(242, 146, 9)',
       fontSize: "1.8rem",
       fontWeight: "bold",
-      paddingRight: "9rem", 
-      fontFamily: 'Bebas Neue ',
+      paddingRight: "10rem", 
+      fontFamily: 'Bebas Neue',
       
     },
     iconContainer: {
