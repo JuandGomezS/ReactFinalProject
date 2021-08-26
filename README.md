@@ -26,7 +26,7 @@ npm init
 
 ## Funcionamiento ⚙️
 
-_En el siguiente GIF se observa el funcionamiento de la aplicación y el recorrido completo de compra_
+_En el GIF funcionamiento.gif se observa el funcionamiento de la aplicación y el recorrido completo de compra_
 
 
 ## Despliegue 📦
