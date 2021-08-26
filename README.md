@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Raven Art e-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Este proyecto es un e-commerce desarrollado para una tienda de publicidad en Cajicá-Colombia, en el mismo se permite hacer compra de elementos tanguibles e intangibles. Desarrollado en React.js y con base de datos de firebase._
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas:_
 
-### `npm start`
+**Clonar Repositorio:** 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+git clone https://github.com/JuandGomezS/ReactFinalProject.git
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Pre-requisitos 📋
 
-### `npm test`
+_Node.js v14.17.3. o superior_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Instalación 🔧
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Instalar node en el proyecto:** 
+```
+npm init
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionamiento ⚙️
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_En el siguiente GIF se observa el funcionamiento de la aplicación y el recorrido completo de compra_
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Despliegue 📦
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Ejecutar proyectos:** 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Construido con 🛠️
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [React.JS](https://reactjs.org/) - El framework web usado
+* [Node.JS](https://nodejs.org/en/) -  Entorno de ejecución de JavaScript
+* [Material-UI](https://material-ui.com/) - Usado para estilizar la aplicación
+* [Firebase](https://firebase.google.com/) - Usado como motor de base de datos
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Versionado 📌
 
-### Analyzing the Bundle Size
+_Versión 1.0_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Autores ✒️
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* **Juan David Gómez** - *Trabajo Inicial* - [JuandGomezS](https://github.com/JuandGomezS)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Expresiones de Gratitud 🎁
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Agradecimiento profundo a CoderHouse y su lucha por la democratización de la educación la cual entregan con mucho profesionalismo y tecnicidad; también agradecer a Santiago Migueles mi tutor por su constancia y empeño y al profesor Horacio Gutierrez por compartir su conocimiento con tanta pedagogía. Tambien a mi amigo Diego Pineda por sus consejos y ayudas infinitas.
